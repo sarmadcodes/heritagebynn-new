@@ -80,87 +80,75 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Featured Collections */}
-      <section className="py-12 sm:py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8 sm:mb-16">
-            <h2 className="text-3xl font- sm:text-4xl font-serif mb-2 sm:mb-4" style={{ color: '#3E0309' }}>
-              - Featured Collections -
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg px-2">
-              Discover our curated selection of exquisite bridal and formal wear
-            </p>
-          </div>
+      
+<section className="py-12 sm:py-20 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-8 sm:mb-16">
+      <h2 className="text-3xl sm:text-4xl font-serif mb-2 sm:mb-4" style={{ color: '#3E0309' }}>
+        - Featured Collections -
+      </h2>
+      <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg px-2">
+        Discover our curated selection of exquisite bridal and formal wear
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8 mb-6 sm:mb-12">
-            {/* Bridal Collection */}
-            <div className="group relative overflow-hidden rounded-lg aspect-[16/9] sm:aspect-[4/5] cursor-pointer">
-              <img
-                src={zarizewar1}
-                alt="Bridal Collection"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 text-white">
-                <h3 className="text-lg sm:text-2xl font-serif mb-1 sm:mb-2">Bridal Collection</h3>
-                <p className="mb-2 sm:mb-4 opacity-90 text-sm sm:text-base">Timeless elegance for your special day</p>
-                <Link
-                  to="/shop?category=Bridal"
-                  className="inline-flex items-center space-x-2 text-rose-200 font-medium hover:text-white transition-colors text-sm sm:text-base"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                >
-                  <span>Shop Now</span>
-                  <ChevronRight size={16} />
-                </Link>
-              </div>
-            </div>
-
-            {/* Formal Wear */}
-            <div className="group relative overflow-hidden rounded-lg aspect-[16/9] sm:aspect-[4/5] cursor-pointer">
-              <img
-                src={barfiblush1}
-                alt="Formal Wear"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 text-white">
-                <h3 className="text-lg sm:text-2xl font-serif mb-1 sm:mb-2">Formal Wear</h3>
-                <p className="mb-2 sm:mb-4 opacity-90 text-sm sm:text-base">Sophisticated designs for every occasion</p>
-                <Link
-                  to="/shop?category=Formal"
-                  className="inline-flex items-center space-x-2 text-rose-200 font-medium hover:text-white transition-colors text-sm sm:text-base"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                >
-                  <span>Shop Now</span>
-                  <ChevronRight size={16} />
-                </Link>
-              </div>
-            </div>
-
-            {/* Party Wear */}
-            <div className="group relative overflow-hidden rounded-lg aspect-[16/9] sm:aspect-[4/5] cursor-pointer sm:block">
-              <img
-                src={mastaaniharyali2}
-                alt="Party Wear"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 text-white">
-                <h3 className="text-lg sm:text-2xl font-serif mb-1 sm:mb-2">Party Wear</h3>
-                <p className="mb-2 sm:mb-4 opacity-90 text-sm sm:text-base">Contemporary styles for modern celebrations</p>
-                <Link
-                  to="/shop?category=Party Wear"
-                  className="inline-flex items-center space-x-2 text-rose-200 font-medium hover:text-white transition-colors text-sm sm:text-base"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                >
-                  <span>Shop Now</span>
-                  <ChevronRight size={16} />
-                </Link>
-              </div>
-            </div>
-          </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8 mb-6 sm:mb-12">
+      {/* Bridal Collection */}
+      <Link
+        to="/shop?category=Bridal"
+        className="group relative overflow-hidden rounded-lg aspect-[16/9] sm:aspect-[4/5] cursor-pointer block"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      >
+        <img
+          src={zarizewar1}
+          alt="Bridal Collection"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 text-white">
+          <h3 className="text-lg sm:text-2xl font-serif mb-1 sm:mb-2">Bridal Collection</h3>
+          <p className="mb-2 sm:mb-4 opacity-90 text-sm sm:text-base">Timeless elegance for your special day</p>
         </div>
-      </section>
+      </Link>
+
+      {/* Formal Wear */}
+      <Link
+        to="/shop?category=Formal"
+        className="group relative overflow-hidden rounded-lg aspect-[16/9] sm:aspect-[4/5] cursor-pointer block"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      >
+        <img
+          src={barfiblush1}
+          alt="Formal Wear"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 text-white">
+          <h3 className="text-lg sm:text-2xl font-serif mb-1 sm:mb-2">Formal Wear</h3>
+          <p className="mb-2 sm:mb-4 opacity-90 text-sm sm:text-base">Sophisticated designs for every occasion</p>
+        </div>
+      </Link>
+
+      {/* Party Wear */}
+      <Link
+        to="/shop?category=Party Wear"
+        className="group relative overflow-hidden rounded-lg aspect-[16/9] sm:aspect-[4/5] cursor-pointer sm:block"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      >
+        <img
+          src={mastaaniharyali2}
+          alt="Party Wear"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 text-white">
+          <h3 className="text-lg sm:text-2xl font-serif mb-1 sm:mb-2">Party Wear</h3>
+          <p className="mb-2 sm:mb-4 opacity-90 text-sm sm:text-base">Contemporary styles for modern celebrations</p>
+        </div>
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* Featured Products */}
       <section className="py-12 sm:py-20 bg-white">
@@ -174,7 +162,7 @@ export function HomePage() {
 
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8">
             {featuredProducts.map((product) => (
-              <div key={product.id} className="w-full">
+              <div key={product._id} className="w-full">
                 <ProductCard product={product} />
               </div>
             ))}
